@@ -18,12 +18,12 @@ int main () {
 			val = 11;
 			break;
 		case 'X':
-			return 0;
+			continue;
 		default:
 			val = atoi(card_name);
 			if ((val < 1) || (val > 10)) {
-				puts ("The card is out of range");
-			//	continue;
+				puts ("I don't understand that value!");
+				continue;
 			}
 		}
 		if ((val > 2) && (val < 7)) {
