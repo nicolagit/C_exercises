@@ -8,7 +8,11 @@ int main(int argc, char *argv[]) {
 		fprintf(stderr, "You need to give 5 arguments\n");
 		return 1;
 	}
-	FILE *in = fopen("07b_spooky.csv", "r");
+	FILE *in;
+	if (!(in = fopen("07b_spooky.csv", "r"))) {
+		fprintf(stderr, "Can't open the file.\n");
+		return 1;
+	}
 	FILE *file1 = fopen(argv[2], "w");
 	FILE *file2 = fopen(argv[4], "w");
 	FILE *file3 = fopen(argv[5], "w");
